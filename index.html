@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alerta PG</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1f3a"/>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<div id="dashboard" class="page active">
+  <h1>Alerta PG</h1>
+
+  <div class="card alerta">
+    <h2>🔴 Alerta Crítico</h2>
+    <p>Chuvas intensas na região Central</p>
+  </div>
+
+  <div class="card">
+    <h3>🌧️ 48mm nas últimas 24h</h3>
+    <p>Nível de risco: Alto</p>
+  </div>
+</div>
+
+<div id="mapa" class="page">
+  <h1>Mapa de Risco</h1>
+  <div id="map"></div>
+</div>
+
+<div id="alertas" class="page">
+  <h1>Alertas</h1>
+  <div class="alert-item red">🔴 Deslizamento – Centro</div>
+  <div class="alert-item orange">🟠 Risco de Alagamento – Oficinas</div>
+  <div class="alert-item yellow">🟡 Chuva Moderada – Uvaranas</div>
+</div>
+
+<div id="ocorrencias" class="page">
+  <h1>Ocorrências</h1>
+  <div class="card">
+    📍 Vila Cipa – Alagamento – Jan/2025
+  </div>
+</div>
+
+<div id="configuracoes" class="page">
+  <h1>Configurações</h1>
+  <p>Notificações por bairro (em breve)</p>
+</div>
+
+<div class="navbar">
+  <button onclick="showPage('dashboard')">🏠</button>
+  <button onclick="showPage('mapa')">🗺️</button>
+  <button onclick="showPage('alertas')">🚨</button>
+  <button onclick="showPage('ocorrencias')">📚</button>
+  <button onclick="showPage('configuracoes')">⚙️</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
